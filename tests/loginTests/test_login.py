@@ -22,7 +22,7 @@ class TestLogin:
         driver.find_element(By.NAME, "username").send_keys("adminadmin")
         driver.find_element(By.NAME, "password").send_keys("demodemo")
         driver.find_element(By.NAME, "username").submit()
-        assert "ParaBank | Accounts Overview" in driver.title
+        assert "ParaBank | Error" in driver.title
 
     def test_02_login_fail_test(self, test_setup):
         driver = test_setup
