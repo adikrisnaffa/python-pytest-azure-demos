@@ -30,9 +30,9 @@ class TestLogin:
         driver.find_element(By.NAME, "username").send_keys("admin")
         driver.find_element(By.NAME, "password").send_keys("wrongpassword")
         driver.find_element(By.NAME, "username").submit()
-        assert "ParaBank | Accounts Overview" not in driver.title
+        assert "ParaBank | Error" in driver.title
 
-    def test_03_login(self, test_setup):
+    def test_03_login_fail_test(self, test_setup):
         driver = test_setup
         driver.get("https://parabank.parasoft.com/parabank/index.htm")
         driver.find_element(By.NAME, "username").send_keys("admin")
@@ -46,4 +46,4 @@ class TestLogin:
         driver.find_element(By.NAME, "username").send_keys("admin")
         driver.find_element(By.NAME, "password").send_keys("wrongpassword")
         driver.find_element(By.NAME, "username").submit()
-        assert "ParaBank | Accounts Overview" not in driver.title
+        assert "ParaBank | Error" in driver.title
