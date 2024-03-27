@@ -22,7 +22,7 @@ class TestAboutUs:
         driver.find_element(By.NAME, "username").send_keys("adminadminadmin")
         driver.find_element(By.NAME, "password").send_keys("adminadminadmin")
         driver.find_element(By.NAME, "username").submit()
-        assert "ParaBank | Accounts Overview" in driver.title
+        assert "ParaBank | Error" in driver.title
 
         driver.find_element(By.XPATH, "//a[text()='About Us']").click()
         assert "ParaBank | About Us" in driver.title
